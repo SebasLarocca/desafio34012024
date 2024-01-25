@@ -1,20 +1,20 @@
 [{
-    "title": "Hey",
-    "description": "Hola",
-    "price": 2,
-    "stock": 2,
-    "code": "a2",
-    "category": "2",
+    "title": "Remera",
+    "description": "Buena remera",
+    "price": 120,
+    "stock": 10,
+    "code": "1",
+    "category": "Remeras",
     "status" : false,
-    "thumbnails" : ["a"]
+    "thumbnails" : ["remera.jpg"]
 },
 {
-    "title": "asdsadasd",
-    "description": "Ho123123la",
-    "price": 22,
-    "stock": 23,
-    "code": "asda23",
-    "category": "22",
+    "title": "Buzo",
+    "description": "Buen buzo",
+    "price": 1220,
+    "stock": 1,
+    "code": "2",
+    "category": "Abrigos",
     "status" : true,
-    "thumbnails" : ["a"]
+    "thumbnails" : ["buzo.jpg"]
 }]
