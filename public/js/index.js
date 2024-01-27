@@ -2,14 +2,14 @@ const socket = io()
 
 const listadoProductos = document.getElementById('listadoProductos');
 
-
-
 socket.on('evento', data =>{
     console.log(data)
     parsedData = JSON.parse(data)
     let listadoProductosHTML = ''
+    
     parsedData.map( element => {
-        listadoProductosHTML = listadoProductosHTML + `<p>Producto: ${element.title}, Precio: ${element.precio}, Descripción: ${element.descripcion}</p>`
+        listadoProductosHTML = listadoProductosHTML + `<tr><td>${element.title}</td><td>${element.precio}</td><td>${element.descripcion}</td><td>${element.category}</td></tr>`
     })
-    listadoProductos.innerHTML = listadoProductosHTML
+    let marcoTabla = `<table><tr><th>Producto</th><th>Precio</th><th>Descripción</th><th>Categoría</th></tr>${listadoProductosHTML}</table>`
+    listadoProductos.innerHTML = marcoTabla
 })

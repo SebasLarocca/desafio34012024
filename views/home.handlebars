@@ -4,16 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
     <style src="/public/css/styles.css"></style>
 </head>
 
 <body>
     <div>
-        vista de productos
-        {{#each parsedProducts}}
-        <p>Precio: {{precio}} Producto: {{title}}</p>
-        {{/each}}
+        <h4>Vista de productos protocolo HTML</h1>
+            <div id="contenedor_productos">
+                <table>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Descripción</th>
+                        <th>Categoría</th>
+                    </tr>
+                    {{#each parsedProducts}}
+                    <tr>
+                        <td> {{title}}</td>
+                        <td class="align_right">{{precio}}</td>
+                        <td>{{descripcion}}</td>
+                        <td>{{category}}</td>
+                    </tr>
+
+                    {{/each}}
+                </table>
+            </div>
     </div>
 </body>
+
 </html>
