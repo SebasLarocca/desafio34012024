@@ -1,12 +1,17 @@
-import express from 'express'
-import ProductManager from '../classes/ProductManager.js';
-const productManager = new ProductManager();
-const router = express.Router()
+import express from 'express';
+import productManager from '../productManager.js'
 
-router.get('/', async (req,res) => {
-    const content = await productManager.getProducts();
-    const products = content.data
-    res.render('home', {products})
+const router = express.Router();
+
+router.get("/", async (req, res) => {
+    const products = await productManager.getProducts()
+    let parsedProducts = JSON.parse(products)
+    console.log(parsedProducts)
+    res.render("home",  { parsedProducts });
+});
+
+router.get('/realtimeproducts', (req, res)=>{
+    res.render('realTimeProducts', {})
 })
 
-export default router
+export default router;
